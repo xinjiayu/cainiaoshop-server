@@ -20,5 +20,5 @@ func init() {
 }
 
 func getDbConnect() (*sql.DB, error) {
-	return sql.Open("mysql", "root:Hsl58839010@/cainaioshop")
+	return sql.Open("mysql", "root:Hsl58839010@/cainiaoshop")
 }

@@ -10,7 +10,7 @@ import (
 func GetRollRecommend() ([]*model.RollRecommendModel, error) {
 	err := DB.Ping()
 	if err != nil {
-		log.Debugf("连接数据库错误：%v", err)
+		log.Debugf("GetRollRecommend 连接数据库错误：%v", err)
 		return nil, err
 	}
 
