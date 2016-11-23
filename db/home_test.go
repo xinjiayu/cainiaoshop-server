@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestGetRollCommend(t *testing.T) {
+func TestGetRollRecommend(t *testing.T) {
 	assert := assert.New(t)
-	result, err := GetRollCommend()
+	result, err := GetRollRecommend()
 	assert.Nil(err, "获取错误：%v", err)
 	assert.Equal(8, len(result), "获取数据库数据错误")
 	for i := 0; i < len(result); i++ {

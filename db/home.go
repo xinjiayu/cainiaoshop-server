@@ -15,7 +15,7 @@ func GetRollRecommend() ([]*model.RollRecommendModel, error) {
 	}
 
 	var commends []*model.RollRecommendModel
-	rows, err := DB.Query("SELECT * FROM t_roll_recommend")
+	rows, err := DB.Query("SELECT * FROM cainiaoshop.t_roll_commend")
 	if err != nil {
 		log.Debugf("getRollCommend 获取结果错误：%v", err)
 		return nil, err
@@ -26,7 +26,7 @@ func GetRollRecommend() ([]*model.RollRecommendModel, error) {
 		err := rows.Scan(&recommend.ID, &recommend.ImageURL, &recommend.Dest)
 		if err != nil {
 			log.Infof("获取recommend错误：%v", err)
-			return nil, err
+			continue
 		}
 		commends = append(commends, recommend)
 
